@@ -1,0 +1,6 @@
+{
+  "magic": "crash_me_now",
+  "buffer": "This is a very long buffer that exceeds 100 characters and should trigger the buffer overflow simulation in our test program",
+  "divisor": 0,
+  "depth": 2000
+}
