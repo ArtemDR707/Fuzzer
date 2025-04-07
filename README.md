@@ -147,30 +147,13 @@ python fuzzer_cli.py detect-format /path/to/file_or_directory --recursive
 
 ## Advanced Features
 
-### QEMU Instrumentation
-
-The QEMU instrumentation feature allows fuzzing closed-source binaries with coverage information. This is particularly useful for finding bugs in applications where source code is not available.
-
-```bash
-python fuzzer_cli.py qemu-fuzz /path/to/binary --timeout 7200 --memory-limit 2048
-```
-
-### Source Code Analysis
-
-The source code analyzer can identify input handling functions, data structures, and potential vulnerabilities in the source code. Supported languages include C, C++, Python, JavaScript, Java, Go, and Rust.
-
-```bash
-python fuzzer_cli.py analyze-source /path/to/source --output analysis_results.json
-```
-
-### Crash Analysis
-
-The crash analyzer provides detailed information about crashes, including crash type, crash location, and potential vulnerability. It can also reproduce crashes to verify they are genuine.
-
-```bash
-python fuzzer_cli.py analyze-crash /path/to/binary /path/to/crash_file --timeout 30
-```
-
+python3 fuzzer_cli.py fuzz /path/to/target_binary
+Полный фаззинг с использованием всех методов:
+python3 fuzzer_cli.py full-fuzz /path/to/target_binary_or_directory --generate-corpus
+Структурно-ориентированный фаззинг:
+python3 fuzzer_cli.py structure-fuzz /path/to/target_binary --format json
+QEMU-фаззинг для закрытых бинарных файлов:
+python3 fuzzer_cli.py qemu-fuzz /path/to/binary
 ## Credits
 
 This tool was developed by [Your Organization] for advanced fuzzing research.
