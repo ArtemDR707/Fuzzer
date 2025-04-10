@@ -1,0 +1,210 @@
+==================================================
+           INTELLIGENT FUZZING CRASH REPORT       
+==================================================
+
+Total crashes analyzed: 29
+Unique crashes identified: 19
+
+CRASH GROUPS BY REASON:
+=======================
+
+Reason: RuntimeError: Simulated stack overflow
+Count: 12
+Example files:
+  - ./custom_fuzzing_results/crashes/crash_1743874563_9859.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_5991.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_7042.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_1058.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_2934.json
+  - ... and 7 more
+
+Reason: RuntimeError: Simulated crash 1
+Count: 9
+Example files:
+  - ./custom_fuzzing_results/crashes/crash_1743874564_6939.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_9488.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_5764.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_3076.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_5531.json
+  - ... and 4 more
+
+Reason: RuntimeError: Simulated buffer overflow
+Count: 6
+Example files:
+  - ./custom_fuzzing_results/crashes/crash_1743874564_6837.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_7483.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_5467.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_7005.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_5546.json
+  - ... and 1 more
+
+Reason: ZeroDivisionError: float division by zero
+Count: 2
+Example files:
+  - ./custom_fuzzing_results/crashes/crash_1743874564_9886.json
+  - ./custom_fuzzing_results/crashes/crash_1743874564_1491.json
+
+
+DETAILED CRASH ANALYSIS:
+========================
+
+File: ./custom_fuzzing_results/crashes/crash_1743874563_9859.json
+Reason: RuntimeError: Simulated stack overflow
+Hash: b9dd97aa21
+Content Analysis:
+  - file_size: 15
+  - object_keys: ['depth']
+  - trigger_features: ['recursion_depth']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_6939.json
+Reason: RuntimeError: Simulated crash 1
+Hash: b1ec10235a
+Content Analysis:
+  - file_size: 8383
+  - object_keys: ['pSzIYH', 'magic', 'buffer']
+  - trigger_features: ['magic_value', 'buffer_overflow']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_6837.json
+Reason: RuntimeError: Simulated buffer overflow
+Hash: c14b955812
+Content Analysis:
+  - file_size: 271
+  - object_keys: ['magic', 'buffer', 'divisor', 'depth']
+  - trigger_features: ['buffer_overflow', 'division_by_zero', 'recursion_depth']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_5991.json
+Reason: RuntimeError: Simulated stack overflow
+Hash: 02fcd243e3
+Content Analysis:
+  - file_size: 15
+  - object_keys: ['depth']
+  - trigger_features: ['recursion_depth']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_7042.json
+Reason: RuntimeError: Simulated stack overflow
+Hash: 04b5c6837c
+Content Analysis:
+  - file_size: 15
+  - object_keys: ['depth']
+  - trigger_features: ['recursion_depth']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_1058.json
+Reason: RuntimeError: Simulated stack overflow
+Hash: 02fcd243e3
+Content Analysis:
+  - file_size: 15
+  - object_keys: ['depth']
+  - trigger_features: ['recursion_depth']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_9488.json
+Reason: RuntimeError: Simulated crash 1
+Hash: 849ef67970
+Content Analysis:
+  - file_size: 172
+  - object_keys: ['magic', 'buffer', 'divisor', 'depth']
+  - trigger_features: ['magic_value', 'buffer_overflow', 'division_by_zero']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_5764.json
+Reason: RuntimeError: Simulated crash 1
+Hash: 6bcb2627e6
+Content Analysis:
+  - file_size: 25
+  - object_keys: ['magic']
+  - trigger_features: ['magic_value']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_2934.json
+Reason: RuntimeError: Simulated stack overflow
+Hash: c06d4e2e21
+Content Analysis:
+  - file_size: 166
+  - object_keys: ['magic', 'buffer', 'divisor', 'depth']
+  - trigger_features: ['recursion_depth']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_3076.json
+Reason: RuntimeError: Simulated crash 1
+Hash: 6bcb2627e6
+Content Analysis:
+  - file_size: 25
+  - object_keys: ['magic']
+  - trigger_features: ['magic_value']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_6684.json
+Reason: RuntimeError: Simulated stack overflow
+Hash: 02fcd243e3
+Content Analysis:
+  - file_size: 15
+  - object_keys: ['depth']
+  - trigger_features: ['recursion_depth']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_5531.json
+Reason: RuntimeError: Simulated crash 1
+Hash: 6bcb2627e6
+Content Analysis:
+  - file_size: 25
+  - object_keys: ['magic']
+  - trigger_features: ['magic_value']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_9735.json
+Reason: RuntimeError: Simulated stack overflow
+Hash: b9dd97aa21
+Content Analysis:
+  - file_size: 15
+  - object_keys: ['depth']
+  - trigger_features: ['recursion_depth']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_8051.json
+Reason: RuntimeError: Simulated stack overflow
+Hash: 04b5c6837c
+Content Analysis:
+  - file_size: 15
+  - object_keys: ['depth']
+  - trigger_features: ['recursion_depth']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_7483.json
+Reason: RuntimeError: Simulated buffer overflow
+Hash: 9d3b34e5d1
+Content Analysis:
+  - file_size: 4509
+  - object_keys: ['tggznrJblg', 'buffer']
+  - trigger_features: ['buffer_overflow']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_9886.json
+Reason: ZeroDivisionError: float division by zero
+Hash: 9c71fb118b
+Content Analysis:
+  - file_size: 16
+  - object_keys: ['divisor']
+  - trigger_features: ['division_by_zero']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_5742.json
+Reason: RuntimeError: Simulated crash 1
+Hash: 6bcb2627e6
+Content Analysis:
+  - file_size: 25
+  - object_keys: ['magic']
+  - trigger_features: ['magic_value']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_1491.json
+Reason: ZeroDivisionError: float division by zero
+Hash: 07942bcdd3
+Content Analysis:
+  - file_size: 31
+  - object_keys: ['rfK', 'divisor']
+  - trigger_features: ['division_by_zero']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_6121.json
+Reason: RuntimeError: Simulated stack overflow
+Hash: 2cb6aae33c
+Content Analysis:
+  - file_size: 15
+  - object_keys: ['depth']
+  - trigger_features: ['recursion_depth']
+
+File: ./custom_fuzzing_results/crashes/crash_1743874564_1192.json
+Reason: RuntimeError: Simulated stack overflow
+Hash: 02fcd243e3
+Content Analysis:
+  - file_size: 15
+  - object_keys: ['depth']
+  - trigger_features: ['recursion_depth']
+
