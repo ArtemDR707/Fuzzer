@@ -1,7 +1,4 @@
-# IntelFuzz - Intelligent Fuzzing Tool
-
-IntelFuzz is an advanced fuzzing tool designed for testing executable files with smart grammar-based input generation, comprehensive crash detection, and detailed analysis capabilities. It specializes in structure-aware fuzzing with support for various input formats, including JSON, XML, command-line arguments, and binary data.
-
+Fuzzer - 
 ## Key Features
 
 - **Smart Grammar-Based Input Generation**: Uses formal grammars to generate structurally valid inputs
@@ -18,25 +15,7 @@ IntelFuzz is an advanced fuzzing tool designed for testing executable files with
 ### Requirements
 
 - Python 3.10 or higher
-- Dependencies: gramfuzz, python-magic, psutil, matplotlib, tqdm
-
-### Setup
-
-```bash
-# Install dependencies
-pip install gramfuzz python-magic psutil matplotlib tqdm
-```
-
-For QEMU instrumentation capabilities (optional):
-
-```bash
-# Install AFL++ with QEMU support
-apt-get install build-essential libtool-bin python3-dev automake git flex bison libglib2.0-dev libpixman-1-dev python3-setuptools
-git clone https://github.com/AFLplusplus/AFLplusplus
-cd AFLplusplus
-make distrib
-sudo make install
-```
+- Dependencies: gramfuzz, python-magic, psutil, matplotlib, tqdm and AFL++ with QUME
 
 ## Usage
 
@@ -91,50 +70,6 @@ python fuzzer_cli.py detect-format /path/to/file_or_directory --recursive
 - `--memory-monitor`: Enable detailed memory monitoring
 - `--memory-limit`: Set memory limit for AFL++ (for QEMU fuzzing)
 
-## Directory Structure
-
-```
-.
-├── fuzzer_cli.py          # Main command-line interface
-├── grammars/              # Grammar definitions for input generation
-│   ├── __init__.py        # Grammar loading mechanism
-│   ├── json_grammar.py    # JSON grammar
-│   ├── xml_grammar.py     # XML grammar
-│   ├── command_grammar.py # Command-line grammar
-│   └── binary_grammar.py  # Binary format grammar
-├── utils/                 # Utility modules
-│   ├── format_detector.py # Input format detection
-│   ├── source_analyzer.py # Source code analysis
-│   ├── behavior_monitor.py # Process behavior monitoring
-│   ├── qemu_instrumentation.py # QEMU-based fuzzing
-│   ├── logger.py          # Advanced logging
-│   └── common.py          # Common utilities
-├── results/               # Fuzzing results (created by the tool)
-├── corpus/                # Test corpus (created by the tool)
-└── logs/                  # Log files (created by the tool)
-```
-
-## Example Workflow
-
-1. Analyze source code to understand input formats and potential vulnerabilities:
-   ```bash
-   python fuzzer_cli.py analyze-source /path/to/source
-   ```
-
-2. Generate a test corpus based on detected formats:
-   ```bash
-   python fuzzer_cli.py generate-corpus --format json --output corpus/json
-   ```
-
-3. Run fuzzing with the generated corpus:
-   ```bash
-   python fuzzer_cli.py fuzz /path/to/binary --seed-corpus corpus/json
-   ```
-
-4. Analyze any crashes found:
-   ```bash
-   python fuzzer_cli.py analyze-crash /path/to/binary /path/to/results/crashes/crash_00001.input
-   ```
 
 ## Supported Binary Formats
 
@@ -154,10 +89,3 @@ python3 fuzzer_cli.py full-fuzz /path/to/target_binary_or_directory --generate-c
 python3 fuzzer_cli.py structure-fuzz /path/to/target_binary --format json
 QEMU-фаззинг для закрытых бинарных файлов:
 python3 fuzzer_cli.py qemu-fuzz /path/to/binary
-## Credits
-
-This tool was developed by [Your Organization] for advanced fuzzing research.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
